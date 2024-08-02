@@ -1,6 +1,8 @@
 package ru.irlix_moviesearch.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.irlix_moviesearch.dto.MovieDTO;
@@ -16,9 +18,10 @@ public class MovieController {
 
     private final MovieService movieService;
 
-    @GetMapping
-    public List<MovieDTO> getAllGenres() {
-        return movieService.getAll();
+    @GetMapping()
+    public Page<MovieDTO> getAll(@RequestParam(value = "page", defaultValue = "0") Integer page,
+                                 @RequestParam(value = "size", defaultValue = "2") Integer size) {
+        return movieService.getAll(PageRequest.of(page, size));
     }
 
     @GetMapping("/{id}")
