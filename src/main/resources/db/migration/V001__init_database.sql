@@ -21,3 +21,23 @@ CREATE TABLE movie_genres (
                               FOREIGN KEY (genre_id) REFERENCES genres(id)
 
 );
+
+CREATE TABLE critics (
+                        id SERIAL PRIMARY KEY,
+                        first_name VARCHAR(10) NOT NULL,
+                        last_name VARCHAR(10) NOT NULL,
+                        info VARCHAR(70)
+);
+
+CREATE TABLE reviews (
+
+                        id SERIAL PRIMARY KEY,
+                        rating DOUBLE PRECISION,
+                        message VARCHAR(255),
+                        date TIMESTAMP,
+                        movie_id INT,
+                        critic_id INT,
+                        FOREIGN KEY (movie_id) REFERENCES movies(id),
+                        FOREIGN KEY (critic_id) REFERENCES critics(id)
+);
+

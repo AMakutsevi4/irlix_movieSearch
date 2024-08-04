@@ -14,6 +14,7 @@ import java.util.Set;
 @Entity
 @Table(name = "movies")
 public class Movie {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
@@ -21,7 +22,9 @@ public class Movie {
     private double duration;
     private double general_assessment;
     private String year_show;
-    private String reviews;
+
+    @OneToMany(mappedBy = "movie")
+    private Set<Review> reviews = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
