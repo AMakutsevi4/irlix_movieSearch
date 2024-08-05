@@ -29,9 +29,9 @@ public class MovieController {
         return ResponseEntity.ok(movieService.getById(id));
     }
 
-    @GetMapping("/by-genre/{genreId}")
-    public ResponseEntity<List<Movie>> getMoviesByGenre(@PathVariable Long genreId) {
-        List<Movie> movies = movieService.findByGenre(genreId);
+    @GetMapping("/by-genre/{genre_id}")
+    public ResponseEntity<List<Movie>> getMoviesByGenre(@PathVariable Long genre_id) {
+        List<Movie> movies = movieService.findByGenre(genre_id);
         return ResponseEntity.ok(movies);
     }
 
