@@ -1,5 +1,6 @@
 package ru.irlix_moviesearch.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/critics")
 @RequiredArgsConstructor
+@Tag(name="Критик", description="Данный контроллер содержит CRUD операции с сущностью критик")
 public class CriticController {
 
     private final CriticService criticService;

@@ -1,5 +1,6 @@
 package ru.irlix_moviesearch.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(description = "Сущность рецензии")
 public class ReviewDTO {
 
     private double rating;

@@ -1,14 +1,14 @@
 # Обзор
 
 RESTful приложение для управления подборкой кино. 
-Предоставляет функциональность для работы с жанрами, фильмами, критиками и рецензиями. 
+Предоставляет функциональность для работы с жанрами, фильмами, критиками и рецензиями.
 
 # Функционал
 
 ### Жанры
 - CRUD
 
-#### Endpoints
+**Endpoints**
 - `POST api/genres` - Создать новый жанр
 - `GET api/genres` - Получить все жанры
 - `GET api/genres/{id}` - Получить жанр по ID
@@ -20,8 +20,7 @@ RESTful приложение для управления подборкой ки
 - Получение фильмов по жанрам (учитывается, что их может быть несколько)
 - Пагинация списка фильмов
 
-#### Endpoints
-
+**Endpoints**
 - `POST api/movies` - Создать новый фильм
 - `GET api/movies` - Получить все фильмы (поддерживает пагинацию)
 - `GET api/movies/{id}` - Получить фильм по ID
@@ -32,7 +31,7 @@ RESTful приложение для управления подборкой ки
 ### Критики
 - CRUD
 
-#### Endpoints
+**Endpoints**
 - `POST api/critics` - Создать нового критика
 - `GET api/critics` - Получить всех критиков
 - `GET api/critics/{id}` - Получить критика по ID
@@ -43,8 +42,7 @@ RESTful приложение для управления подборкой ки
 - CRUD
 - Получение рецензий критиков по конкретному фильму
 
-#### Endpoints
-
+**Endpoints**
 - `POST api/reviews` - Создать новую рецензию
 - `GET api/reviews` - Получить все рецензии
 - `GET api/reviews/{id}` - Получить рецензию по ID
@@ -64,12 +62,23 @@ git@github.com:AMakutsevi4/irlix_movieSearch.git
 create database movie_search
 ```
 3.
-```bash
-Приложение будет доступно по адресу http://localhost:8080.
-```
+Приложение будет доступно по адресу [http://localhost:8080](http://localhost:8080)..
+
 
 # Используемые технологии
 
-- **Backend:** ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) 
-- **База данных:** ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-- **Тестирование:** ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+## Backend
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+Используется для разработки RESTful сервисов.
+
+## База данных
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+Реляционная база данных для хранения данных.
+
+## Тестирование
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+Инструмент для тестирования API.
+
+## Документирование
+[![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)](http://localhost:8080/swagger-ui/index.html#/)
+Используется для автоматического документирования API. [Документация доступна здесь](http://localhost:8080/swagger-ui/index.html#/).
