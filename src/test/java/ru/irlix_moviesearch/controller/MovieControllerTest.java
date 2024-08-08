@@ -78,8 +78,8 @@ class MovieControllerTest {
                 .andExpect(jsonPath("$.name").value("Фильм1"))
                 .andExpect(jsonPath("$.description").value("Описание1"))
                 .andExpect(jsonPath("$.duration").value(120.5))
-                .andExpect(jsonPath("$.general_assessment").value(8.1))
-                .andExpect(jsonPath("$.year_show").value("2024"));
+                .andExpect(jsonPath("$.rating").value(8.1))
+                .andExpect(jsonPath("$.yearShow").value("2024"));
         verify(movieService, times(1)).getById(1L);
     }
 
@@ -102,13 +102,13 @@ class MovieControllerTest {
                 .andExpect(jsonPath("$[0].name").value("Фильм1"))
                 .andExpect(jsonPath("$[0].description").value("Описание1"))
                 .andExpect(jsonPath("$[0].duration").value(120.5))
-                .andExpect(jsonPath("$[0].general_assessment").value(8.1))
-                .andExpect(jsonPath("$[0].year_show").value("2024"))
+                .andExpect(jsonPath("$[0].rating").value(8.1))
+                .andExpect(jsonPath("$[0].yearShow").value("2024"))
                 .andExpect(jsonPath("$[1].name").value("Фильм2"))
                 .andExpect(jsonPath("$[1].description").value("Описание2"))
                 .andExpect(jsonPath("$[1].duration").value(90.0))
-                .andExpect(jsonPath("$[1].general_assessment").value(7.5))
-                .andExpect(jsonPath("$[1].year_show").value("2023"));
+                .andExpect(jsonPath("$[1].rating").value(7.5))
+                .andExpect(jsonPath("$[1].yearShow").value("2023"));
     }
 
     @Test
@@ -131,8 +131,8 @@ class MovieControllerTest {
                 .andExpect(jsonPath("$.name").value("Фильм1"))
                 .andExpect(jsonPath("$.description").value("Описание1"))
                 .andExpect(jsonPath("$.duration").value(120.5))
-                .andExpect(jsonPath("$.general_assessment").value(8.1))
-                .andExpect(jsonPath("$.year_show").value("2024"));
+                .andExpect(jsonPath("$.rating").value(8.1))
+                .andExpect(jsonPath("$.yearShow").value("2024"));
     }
 
     @Test
@@ -158,8 +158,8 @@ class MovieControllerTest {
                 .andExpect(jsonPath("$.name").value("Обновлённый фильм"))
                 .andExpect(jsonPath("$.description").value("Описание1"))
                 .andExpect(jsonPath("$.duration").value(120.5))
-                .andExpect(jsonPath("$.general_assessment").value(8.1))
-                .andExpect(jsonPath("$.year_show").value("2024"));
+                .andExpect(jsonPath("$.rating").value(8.1))
+                .andExpect(jsonPath("$.yearShow").value("2024"));
 
     }
 

@@ -18,7 +18,7 @@ public class MovieDTO {
     private String name;
     private String description;
     private double duration;
-    private double general_assessment;
-    private String year_show;
+    private double rating;
+    private String yearShow;
     private Set<Review> reviews = new HashSet<>();
 }

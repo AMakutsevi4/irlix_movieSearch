@@ -64,6 +64,46 @@ create database movie_search
 3.
 Приложение будет доступно по адресу [http://localhost:8080](http://localhost:8080)..
 
+# Endpoints Movie
+
+## Поиск фильмов по имени
+**Запрос:**
+GET /api/movies/searchName?name={имя_фильма}
+**Пример:**
+http://localhost:8080/api/movies/searchName?name=Фильм2
+
+## Фильтрация списка фильмов
+**Запрос:**
+GET /api/movies?srt={порядок_сортировки}&sortBy={поле_сортировки}
+**Пример:**
+http://localhost:8080/api/movies?srt=asc&sortBy=yearShow
+- **srt** - порядок сортировки (`asc` для возрастания, `desc` для убывания).
+- **sortBy** - поле для сортировки (по умолчанию `name`).
+
+## Поиск фильмов по году показа
+**Запрос:**
+GET /api/movies/searchYear?yearShow={год_показа}
+**Пример:**
+http://localhost:8080/api/movies/searchYear?yearShow=2024
+
+## Поиск фильмов по рейтингу
+**Запрос:**
+GET /api/movies/searchRating?rating={рейтинг}
+**Пример:**
+http://localhost:8080/api/movies/searchRating?rating=6.9
+
+## Поиск фильмов по диапазону дат
+**Запрос:**
+GET /api/movies/searchByYearBetween?startYear={начальный_год}&endYear={конечный_год}
+**Пример:**
+http://localhost:8080/api/movies/searchByYearBetween?startYear=2023&endYear=2024
+
+## Поиск фильмов по диапазону рейтинга
+**Запрос:**
+GET /api/movies/searchByRatingBetween?startRating={начальный_рейтинг}&endRating={конечный_рейтинг}
+**Пример:**
+http://localhost:8080/api/movies/searchByRatingBetween?startRating=6.9&endRating=8.5
+
 
 # Используемые технологии
 

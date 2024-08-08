@@ -20,8 +20,10 @@ public class Movie {
     private String name;
     private String description;
     private double duration;
-    private double general_assessment;
-    private String year_show;
+    @Column(name = "general_assessment")
+    private double rating;
+    @Column(name = "year_show")
+    private String yearShow;
 
     @OneToMany(mappedBy = "movie")
     private Set<Review> reviews = new HashSet<>();
